@@ -256,7 +256,7 @@ class GameUI(object):
         '''
         Parse the coordinate input into (y, x) valid coordinates
         '''
-        y, x = move.strip().split()
+        y, x = move.upper().strip().split()
         y = self._label_to_coord(y)
         x = self._label_to_coord(x)
         return y, x
