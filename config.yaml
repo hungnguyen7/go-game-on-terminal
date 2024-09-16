@@ -1,0 +1,4 @@
+black_stone: O
+white_stone: X
+board_size: 9
+enable_self_destruct: False
