@@ -57,7 +57,10 @@ class Board(np.ndarray):
         '''
         Place a stone at the specified coordinate
         '''
-        self[y][x] = stone
+        if self[y][x] == Stone.EMPTY:
+            self[y][x] = stone
+        else:
+            raise ValueError('Cannot place stone at occupied position')
 
     def remove_stone(self, y, x):
         '''
@@ -77,12 +80,12 @@ class Board(np.ndarray):
         '''
         s = None
         if stone == Stone.EMPTY:
-            s = ' '
+            s = '🟨'
         elif stone == Stone.BLACK:
             s = self.black_stone_render
         elif stone == Stone.WHITE:
             s = self.white_stone_render
-        return f'[{s}]'
+        return f'{s}'
 
     def _render(self):
         '''
@@ -90,7 +93,7 @@ class Board(np.ndarray):
         and so on
         '''
         # horizontal axis
-        print('\n   ' + '  '.join([self._index_to_label(x) \
+        print('\n   ' + ' '.join([self._index_to_label(x) \
                             for x in range(self.board_size)]))
 
         # vertical axis is printed with each row

@@ -60,9 +60,9 @@ class Game(object):
         '''
         if stone == Stone.EMPTY:
             return
-        self.board.place_stone(stone, y, x)
 
         try:
+            self.board.place_stone(stone, y, x)
             self.gm.resolve_board(y, x)
         except SelfDestructException as e:
             self.board.remove_stone(y, x)

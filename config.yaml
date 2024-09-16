@@ -1,4 +1,4 @@
-black_stone: O
-white_stone: X
+black_stone: ⚫
+white_stone: ⚪
 board_size: 9
 enable_self_destruct: False
