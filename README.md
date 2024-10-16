@@ -1,7 +1,7 @@
-# go-game-on-terminal
-A simple go game on terminal written in python.
+# 🟡 Go Game on Terminal
+A simple Go game implemented in Python that you can play directly in your terminal.
 
-## How to play
+## ✨ How to Play
 1. Clone the repository
 2. Run the game by executing `python3 main.py`
-3. Follow the instructions on the terminal to play the game
+3. Follow the instructions displayed in the terminal to play the game. Enjoy!
